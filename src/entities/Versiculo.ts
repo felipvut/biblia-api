@@ -1,7 +1,7 @@
 import { Entity, Column, PrimaryGeneratedColumn } from "typeorm"
 
 @Entity("versiculos")
-export class Versiculo{
+export default class Versiculo{
 
     @PrimaryGeneratedColumn()
     ver_id : number;

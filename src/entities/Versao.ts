@@ -1,7 +1,7 @@
 import { Entity, Column, PrimaryGeneratedColumn } from "typeorm"
 
 @Entity("versoes")
-export class Versao{
+export default class Versao{
 
     @PrimaryGeneratedColumn()
     vrs_id : number;

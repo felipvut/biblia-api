@@ -1,21 +1,21 @@
-import { Entity, Column, PrimaryGeneratedColumn } from "typeorm"
+import { Entity, Column, PrimaryGeneratedColumn, PrimaryColumn } from "typeorm"
 
 @Entity("livros")
-export class Livro{
+export default class Livro{
 
     @PrimaryGeneratedColumn()
-    liv_id : number;
+    liv_id : string;
 
     @Column()
-    liv_tes_id: number
+    liv_tes_id: string;
 
     @Column()
-    liv_pos: number
+    liv_posicao: string;
 
     @Column()
-    liv_nome: string
+    liv_nome: string;
 
     @Column()
-    liv_abreviado: string
+    liv_abreviado: string;
 
 }
