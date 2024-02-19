@@ -1,7 +1,7 @@
 import "reflect-metadata";
 
 import express from "express";
-
+import cors from 'cors';
 import "./database/index";
 import AppDataSource from "./database/index";
 import routes from "./routes";
@@ -15,5 +15,7 @@ AppDataSource.initialize().then(() => {
 }).catch((e) => {
     console.log(e)
 })
+
+app.use(cors())
 
 app.use(routes)
