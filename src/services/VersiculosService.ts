@@ -16,4 +16,11 @@ export class VersiculosService {
             ver_capitulo: ver_capitulo
         })
     }
+
+    async getCapitules(liv_id: any) {
+        if(liv_id.length > 3) {
+            return
+        }
+        return await this.repo.query(`select distinct ver_capitulo from versiculos where ver_liv_id = '${liv_id}';`)
+    }
 }

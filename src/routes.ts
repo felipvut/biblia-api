@@ -35,4 +35,11 @@ routes.get('/versiculos/:ver_vrs_id/:ver_liv_id/:ver_capitulo', async (req, res)
     res.send(result)
 })
 
+routes.get('/capitules/:liv_id', async (req, res) => {
+    const { liv_id } = req.params
+    const controller = controllers['versiculos'].controller
+    let result = await controller.getCapitules(liv_id)
+    res.send(result)
+})
+
 export default routes;

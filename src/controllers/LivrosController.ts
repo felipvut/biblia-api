@@ -7,4 +7,5 @@ export class LivrosController {
         const service = new LivrosService()
         return await service.list()
     }
+
 }
