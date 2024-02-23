@@ -8,13 +8,13 @@ export class VersiculosController {
         return await service.list()
     }
 
-    async getCap(ver_vrs_id: any, ver_liv_id: any, ver_capitulo: any) {
+    async getVersicules(ver_vrs_id: any, liv_abreviado: any, ver_capitulo: any) {
         const service = new VersiculosService()
-        return await service.getCap(ver_vrs_id, ver_liv_id, ver_capitulo )
+        return await service.getVersicules(ver_vrs_id, liv_abreviado, ver_capitulo )
     }
 
-    async getCapitules(liv_id: any) {
+    async getCapitules(liv_abreviado: any) {
         const service = new VersiculosService()
-        return await service.getCapitules(liv_id)
+        return await service.getCapitules(liv_abreviado)
     }
 }
