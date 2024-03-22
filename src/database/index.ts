@@ -7,7 +7,7 @@ import dotenv from "dotenv";
 dotenv.config()
 
 const AppDataSource = new DataSource({
-    type: "mysql",
+    type: "postgres",
     host: process.env.TYPEORM_HOST,
     port: Number(process.env.TYPEORM_PORT),
     username: process.env.TYPEORM_USERNAME,
@@ -15,6 +15,7 @@ const AppDataSource = new DataSource({
     database: process.env.TYPEORM_DATABASE,
     entities: [Livro, Versiculo, Versao, Testamento],
     synchronize: false,
+    ssl: true,
     logging: true,
 })
 

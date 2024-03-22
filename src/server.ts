@@ -8,6 +8,10 @@ import routes from "./routes";
 const app = express()
 const port= 3000
 
+app.use(cors())
+
+app.use(routes)
+
 AppDataSource.initialize().then(() => {
     app.listen(port, () => {
         console.log("Server is running in port " + port)
@@ -15,7 +19,3 @@ AppDataSource.initialize().then(() => {
 }).catch((e) => {
     console.log(e)
 })
-
-app.use(cors())
-
-app.use(routes)
