@@ -16,7 +16,7 @@ const AppDataSource = new DataSource({
     entities: [Livro, Versiculo, Versao, Testamento],
     synchronize: false,
     ssl: true,
-    url: process.env.URL,
+    url: process.env.TYPEORM_URL,
     logging: true,
 })
 
